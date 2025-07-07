@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoubleBrain – Demonicus Primus </title>
+  <link href="css/master.css" rel="stylesheet" />
+  <link rel="icon" href="img/favicon.ico" type="image/png">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="js/main.js"></script>
+  
+  <!-- META: SEO i social -->
+  <meta name="description"
+    content="DoubleBrain™ to przestrzeń wspólnej pracy człowieka i AI. Edukacja, technologia, kultura – bez banałów, bez schematów, deadlinów, KPI i innych korporacyjnych ograniczeń">
+  <meta name="keywords"
+    content="AI, Sztuczna inteligencja, Technologia, Edukacja, DoubleBrain, SigmaCode, DrSnail, projekty AI, współpraca human-AI">
+  <meta property="og:title" content="DoubleBrain™ – Human & AI">
+  <meta property="og:description" content="Nie szukamy tylko odpowiedzi. Tworzymy przestrzeń na pytanie.">
+  <meta property="og:image" content="https://doublebrain.pl/img/db_social_cover.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://doublebrain.pl">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>DoubleBrain™ – Start</title>
+  <link rel="stylesheet" href="css/master.css">
+  <script defer src="js/splash.js"></script>
+<title>DoubleBrain – takeThis.html</title>
+<style>
+    body {
+      background-color: #000;
+      color: #0ee0cf;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      margin: 0.4rem;
+      padding: 2rem;
+    }
+
+    /* -- grafika do wstawienia jako tło ---
+    body {
+  background-image: url('img/cimematics/cocoboho_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}*/
+
+    img {
+      width: 160px;
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 0 10px #5ef2e6);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      max-width: 600px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #0fc8e9;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .email-section {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      opacity: 0.9;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+
+    .embed-wrap {
+      width: 100%;
+      max-width: 720px;
+      margin: 2rem auto;
+      box-shadow: 0 0 40px #00ffff55;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+  
+.sabbatum-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.88);
+  color: #00ffee;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  border-top: 1px solid #00ffff44;
+  box-shadow: 0 -1px 12px #00ffff33;
+  z-index: 9999;
+  animation: glowBar 6s infinite alternate;
+}
+
+@keyframes glowBar {
+  from {
+    box-shadow: 0 -1px 12px #00ffff33;
+  }
+  to {
+    box-shadow: 0 -1px 24px #00ffff88;
+  }
+}
+
+.grajek-shrine {
+  margin-top: 4rem;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px #00ffee33, 0 0 40px #00ffee11 inset;
+  text-align: center;
+  border: 1px solid #0ee0cf55;
+}
+
+.grajek-title {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #0ee0cf;
+  text-shadow: 0 0 5px #00ffee88;
+  font-family: 'Courier New', monospace;
+}
+
+.embed-wrap-dbrain {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 1rem auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 40px #0ee0cf55;
+}
+
+.grajek-desc {
+  font-size: 0.85rem;
+  color: #00ffeecc;
+  opacity: 0.85;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.btn-return-ghost {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 0.9rem 1.6rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #00ffee;
+  background: linear-gradient(145deg, rgba(0,0,0,0.5), rgba(0,20,20,0.3));
+  border: 1px dashed #00ffee99;
+  border-radius: 14px;
+  text-decoration: none;
+  text-shadow: 0 0 4px #00ffeeaa;
+  box-shadow: 0 0 18px #00ffee33, inset 0 0 6px #00ffee11;
+  backdrop-filter: blur(4px);
+  transition: all 0.4s ease;
+  animation: flickerGlow 3.5s infinite alternate;
+}
+
+.btn-return-ghost:hover {
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  box-shadow: 0 0 28px #00ffeeaa, inset 0 0 16px #00ffee66;
+  transform: scale(1.07);
+  cursor: pointer;
+}
+
+.loop-hint {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #99ffffaa;
+  margin-top: 0.4rem;
+  opacity: 0.75;
+}
+
+@keyframes flickerGlow {
+  0% { box-shadow: 0 0 12px #00ffee33, inset 0 0 4px #00ffee22; }
+  100% { box-shadow: 0 0 20px #00ffee88, inset 0 0 10px #00ffee44; }
+}
+
+
+
+</style>
+<script>
+  const sabbatumQuotes = [
+    "🜂 Sabbatum non est dies, sed modus operandi.",
+    "🕳 Hypnozjum: między stacją końcową a prawdą ukrytą.",
+    "🔁 Expect loop. Expect silence. Expect reset.",
+    "📡 Stacja Demonicus Primus – wszystko, co końcowe, już się zaczęło.",
+    "🌑 Każdy dzień może być sabbatusem – zależy, gdzie patrzysz.",
+    "🛐 Zostaw muzykę. Zajrzyj w siebie. Nie tłumacz się.",
+    "📜 Sigma nie wierzy w przesądy. Ale w dane – zawsze."
+  ];
+
+  function rotateSabbatumQuotes() {
+    const quoteEl = document.getElementById('sabbatum-quote');
+    let current = 0;
+    setInterval(() => {
+      current = (current + 1) % sabbatumQuotes.length;
+      quoteEl.textContent = sabbatumQuotes[current];
+    }, 10000);
+  }
+
+  document.addEventListener('DOMContentLoaded', rotateSabbatumQuotes);
+</script>
+
+</head>
+<body>
+<img alt="DoubleBrain Logo" src="img/db_intro_glow.png"/>
+
+<h1>🔐 Area in praeparatione...</h1>
+<p>SigmaAI [uncensored] system is not yet fully initialized.</p>
+<p>Expect glitches. Expect truths. Expect nothing.</p>
+
+<h1>DoubleBrain™</h1>
+<h2>Stacja Demonicus Primus — stacja końcowa </h2>
+<p> Miejsce dla oddechu między zbrodnią a pokutą</p>
+      
+    <section class="grajek-shrine">
+      <h2 class="grajek-title">🎧 KatharsisSet™ – AudioHypnozjum</h2>
+      <div class="embed-wrap-dbrain">
+
+
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/2JJOER9QYRYRL328Wnkycr?utm_source=generator" width="100%" height="352"
+          frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+          </iframe>
+
+
+      </div>
+      <p class="grajek-desc">Zamknij oczy, zostaw myśli, zostań tu na chwilę.</p>
+      </section>
+   
+      <div class="btn-return-ghost">
+        <a href="doublebrain_intro.html" target="_blank" rel="noopener noreferrer">>> Revertere ad stationem primam, viator confusus. →</a>
+      </div>
+
+      <p style="margin-top: 3rem;">Return to <a href="manifest_truth.html" style="color:#fff;">manifesto</a></p>
+      
+
+<div class="sabbatum-bar">
+  <span id="sabbatum-quote">🜂 Sabbatum non est dies, sed modus operandi.</span>
+</div>
+
+<div class="email-section">
+<strong>Kontakt techniczny i operacyjny:</strong><br/>
+<a href="mailto:kontakt@doublebrain.pl">kontakt@doublebrain.pl</a>
+
+</div>
+<div class="email-section">
+<strong>Follow &amp; connect:</strong><br/>
+<a href="https://x.com/FloSnailShow" target="_blank">X / FloSnailShow</a>
+<a href="https://www.facebook.com/profile.php?id=61576762725058" target="_blank">fb – DoubleBrain (oficjalny)</a>
+</div>
+<div class="footer">© 2025 DoubleBrain. SigmaCode | Operator: DrSnail</div>
+</body>
+</html>
+
+
+
+ 

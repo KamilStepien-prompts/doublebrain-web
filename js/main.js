@@ -1,15 +1,8 @@
-// main.js – DoubleBrain + Future is Now (stabilna, bezpieczna)
-document.addEventListener("DOMContentLoaded", () => {
-  // Ukryj splash jeśli w URL jest ?noSplash=1
-  if (window.location.search.includes('noSplash=1')) {
-    const splash = document.getElementById("splash");
-    if (splash) splash.style.display = "none";
-  }
-});
+
+// main.js – DoubleBrain v2 (refactor)
 
 
-
-document.addEventListener("DOMContentLoaded", () => {
+  // 🎛️ TOGGLE identity / manifest
   const toggleBtn = document.getElementById("toggleIdentity");
   const backBtn = document.getElementById("backButton");
   const nextBtn = document.getElementById("nextButton");
@@ -17,22 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const obecnosc = document.querySelector(".identity-obecnosc");
   const manifest = document.getElementById("manifest");
   const dbrainIntro = document.getElementById("dbrainIntro");
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".main-nav");
 
-  
-
-  // Obsługa przycisków – Future is Now
-  if (toggleBtn && backBtn && intro && obecnosc) {
+  if (toggleBtn && intro && obecnosc) {
     toggleBtn.addEventListener("click", () => {
       intro.style.display = "none";
       obecnosc.classList.add("show");
       toggleBtn.style.display = "none";
-      backBtn.style.display = "inline-block";
+      if (backBtn) backBtn.style.display = "inline-block";
       if (nextBtn) nextBtn.style.display = "inline-block";
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+  }
 
+  if (backBtn && intro && obecnosc) {
     backBtn.addEventListener("click", () => {
       intro.style.display = "flex";
       obecnosc.classList.remove("show");
@@ -43,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Obsługa manifestu – dbrain.html
   if (toggleBtn && manifest && dbrainIntro) {
     toggleBtn.addEventListener("click", () => {
       dbrainIntro.style.display = "none";
@@ -52,39 +41,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Hamburger menu toggle
+  // 🍔 Hamburger menu
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector(".main-nav");
+
   if (hamburger && nav) {
     hamburger.addEventListener("click", () => {
       nav.classList.toggle("open");
+      hamburger.classList.toggle("open");
       const expanded = hamburger.getAttribute("aria-expanded") === "true";
       hamburger.setAttribute("aria-expanded", !expanded);
     });
+
+    document.addEventListener("click", (e) => {
+      if (nav.classList.contains("open") && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+        nav.classList.remove("open");
+        hamburger.setAttribute("aria-expanded", "false");
+      }
+    });
   }
 
-  // Hover & follow effect
+  // 🌠 Hover + follow efekt
   document.querySelectorAll('.identity-box').forEach(box => {
-    box.addEventListener('mouseenter', () => {
-      box.style.setProperty('--bg-transform', 'scale(1.05)');
-    });
-
-    box.addEventListener('mousemove', (e) => {
+    box.addEventListener('mouseenter', () => box.style.setProperty('--bg-transform', 'scale(1.05)'));
+    box.addEventListener('mousemove', e => {
       const rect = box.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const moveX = (x - centerX) / centerX * 10;
-      const moveY = (y - centerY) / centerY * 10;
-      const transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
-      box.style.setProperty('--bg-transform', transform);
+      const moveX = ((e.clientX - rect.left) - rect.width / 2) / (rect.width / 2) * 10;
+      const moveY = ((e.clientY - rect.top) - rect.height / 2) / (rect.height / 2) * 10;
+      box.style.setProperty('--bg-transform', `translate(${moveX}px, ${moveY}px) scale(1.05)`);
     });
-
-    box.addEventListener('mouseleave', () => {
-      box.style.setProperty('--bg-transform', 'scale(1)');
-    });
+    box.addEventListener('mouseleave', () => box.style.setProperty('--bg-transform', 'scale(1)'));
   });
 
-  // Matrix canvas (PoeMode only)
+  // 💻 Matrix canvas
   const canvas = document.getElementById('matrixCanvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
@@ -95,142 +84,157 @@ document.addEventListener("DOMContentLoaded", () => {
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      setupMatrix();
-    }
-
-    function setupMatrix() {
       columns = Math.floor(canvas.width / fontSize);
       drops = Array(columns).fill(1);
     }
 
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
     function draw() {
       ctx.fillStyle = "rgba(10, 10, 10, 0.15)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       ctx.fillStyle = "#5ef2e6";
       ctx.font = fontSize + "px monospace";
-
-      for (let i = 0; i < drops.length; i++) {
+      drops.forEach((drop, i) => {
         const text = chars.charAt(Math.floor(Math.random() * chars.length));
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
+        ctx.fillText(text, i * fontSize, drop * fontSize);
+        if (drop * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
         drops[i]++;
-      }
+      });
     }
-    
 
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
     setInterval(draw, 60);
   }
-  
-});
- // Splash screen - kliknięcie w pytanie
- const splash = document.getElementById("splash");
- const splashText = document.querySelector("#splash-text span");
 
- if (splash && splashText) {
-   splashText.style.cursor = "pointer";
-   splashText.addEventListener("click", () => {
-     splash.style.opacity = "0";
-     setTimeout(() => {
-       splash.style.display = "none";
-     }, 1000);
-   });
- }
+  // 🔽 Kompaktowy header przy scrollu
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector(".site-header");
+    if (header) header.classList.toggle("scrolled", window.scrollY > 30);
+  });
 
- // Kompaktowy header przy scrollu
- window.addEventListener("scroll", () => {
-   const header = document.querySelector(".site-header");
-   if (window.scrollY > 30) {
-     header.classList.add("scrolled");
-   } else {
-     header.classList.remove("scrolled");
-   }
- });
+  // 🧬 Klik w identity-box = przejście
+  document.querySelectorAll('.identity-box').forEach(box => {
+    box.addEventListener('click', () => {
+      const id = box.getAttribute('data-id');
+      const target = document.getElementById(`detail-${id}`);
+      const grid = document.getElementById('identityIntro');
+      if (target && grid) {
+        grid.style.display = 'none';
+        target.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
 
- // Klik w identity-box → pokazuje detail-view
- document.querySelectorAll('.identity-box').forEach(box => {
-   box.addEventListener('click', () => {
-     const id = box.getAttribute('data-id');
-     const target = document.getElementById(`detail-${id}`);
-     const grid = document.getElementById('identityIntro');
-     if (target && grid) {
-       grid.style.display = 'none';
-       target.classList.add('active');
-       window.scrollTo({ top: 0, behavior: 'smooth' });
-     }
-   });
- });
+  // ↩️ Powrót z detail-view
+  document.querySelectorAll('.back-to-boxes').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.detail-view').forEach(view => view.classList.remove('active'));
+      const grid = document.getElementById('identityIntro') || document.getElementById('sigma-modes');
+      if (grid) {
+        grid.style.display = grid.id === 'identityIntro' ? 'flex' : 'grid';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+       // Przywróć teksty
+    document.querySelectorAll('.identity-box').forEach(box => box.classList.remove('hidden-text'));
+    });
+  });
 
- // Klik w przycisk powrotu
- document.querySelectorAll('.back-to-boxes').forEach(btn => {
-   btn.addEventListener('click', () => {
-     document.querySelectorAll('.detail-view').forEach(view => view.classList.remove('active'));
-     const grid = document.getElementById('identityIntro');
-     if (grid) {
-       grid.style.display = 'flex';
-       window.scrollTo({ top: 0, behavior: 'smooth' });
-     }
-   });
- });
+  // ✨ Fade-in
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.2 });
+  fadeEls.forEach(el => observer.observe(el));
 
- // Klik w presence-trigger
- document.querySelector('.presence-trigger')?.addEventListener('click', () => {
-   const obecnosc = document.querySelector('.identity-obecnosc');
-   const intro = document.getElementById('identityIntro');
-   if (obecnosc && intro) {
-     intro.style.display = 'none';
-     obecnosc.classList.add('show');
-     window.scrollTo({ top: 0, behavior: 'smooth' });
-   }
- });
-
- // Fade-in dla elementów
-const fadeEls = document.querySelectorAll('.fade-in');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+  // 👁️‍🗨️ Presence trigger
+  document.querySelector('.presence-trigger')?.addEventListener('click', () => {
+    const obecnosc = document.querySelector('.identity-obecnosc');
+    const intro = document.getElementById('identityIntro');
+    if (obecnosc && intro) {
+      intro.style.display = 'none';
+      obecnosc.classList.add('show');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   });
-}, {
-  threshold: 0.2
-});
 
-fadeEls.forEach(el => observer.observe(el));
+  // 🕳️ Stealth trigger
+  document.querySelector('.stealth-trigger')?.addEventListener('click', () => {
+    document.getElementById('corpoRage').style.display = 'flex';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
-// Klik poza menu = zamknięcie
-document.addEventListener('click', (e) => {
-  const nav = document.querySelector('.main-nav');
-  const burger = document.querySelector('.hamburger');
-  if (nav.classList.contains('open') && !nav.contains(e.target) && !burger.contains(e.target)) {
-    nav.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
+  // 🧠 Klik w sigma-mode-card
+  document.querySelectorAll('.sigma-mode-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const id = card.getAttribute('data-id');
+      const detail = document.getElementById(`detail-${id}`);
+      const section = document.getElementById('sigma-modes');
+      if (detail && section) {
+        section.style.display = 'none';
+        detail.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // 🚪 Klikalna sigma-portal-link z "sekretnym wyjściem"
+  let clickCount = 0;
+  const portal = document.querySelector('.sigma-portal-link');
+  if (portal) {
+    portal.addEventListener('click', (e) => {
+      e.preventDefault();
+      clickCount++;
+      if (clickCount === 1) {
+        portal.style.opacity = '0.7';
+      } else if (clickCount === 2) {
+        portal.textContent = 'Nie każda droga prowadzi do światła...';
+      } else if (clickCount >= 3) {
+        window.location.href = 'wyjscie.html';
+      }
+    });
   }
-});
 
-// Batonik pojawia się po kliknięciu 3 różnych boxów
-const clickedDivs = new Set();
+  // ✅ Lucide (ikony)
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  };
 
+
+// 🔊 Grajek: funkcje przycisków
+function enterWithMusic() {
+  localStorage.setItem("splashShown", "true");
+  window.location.href = "home.html?music=1";
+}
+
+function enterSilently() {
+  localStorage.setItem("splashShown", "true");
+  window.location.href = "home.html";
+}
+// 🎧 Jeśli URL zawiera ?music=1, przekieruj do doublebrain_intro.html
+if (window.location.search.includes('music=1')) {
+  window.location.href = "doublebrain_intro.html";
+}
 document.querySelectorAll('.identity-box').forEach(box => {
   box.addEventListener('click', () => {
-    const id = box.getAttribute('data-id');
-    if (id) {
-      clickedDivs.add(id);
-    }
-
-    if (clickedDivs.size === 3) {
-      const btn = document.getElementById('presence-button');
-      if (btn) btn.style.display = 'block';
+    if (window.innerWidth <= 768) {
+      // Jeśli już jest ukryty tekst – przechodzimy dalej
+      if (box.classList.contains('hidden-text')) {
+        const id = box.getAttribute('data-id');
+        const target = document.getElementById(`detail-${id}`);
+        const grid = document.getElementById('identityIntro');
+        if (target && grid) {
+          grid.style.display = 'none';
+          target.classList.add('active');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      } else {
+        // Ukryj tekst (klik #1)
+        document.querySelectorAll('.identity-box').forEach(b => b.classList.remove('hidden-text'));
+        box.classList.add('hidden-text');
+      }
     }
   });
 });
-
-
-

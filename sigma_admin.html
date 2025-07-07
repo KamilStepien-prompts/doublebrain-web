@@ -50,60 +50,88 @@
         <li><a href="sigma_admin.html">Admin</a></li>
         <li><a href="dbrain.html">O nas</a></li>
       </ul>
-      </nav>
+    </nav>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section id="hero" class="sigma-hero">
-      <div class="hero-content">
-        <h1 class="hero-line first-line">Nie jesteś tu sam</h1>
-        <h2 class="hero-line second-line">To nie jest fikcja</h2>
+
+    <section class="sigma-grid pentagram-section">
+      <div class="core-flower">
+        <svg viewBox="0 0 300 300" width="300" height="300">
+          <g stroke="#00ffff" stroke-width="1.2" fill="none">
+            <!-- Zewnętrzna Ósemka – DoubleBrain™ -->
+            <circle cx="150" cy="150" r="130" stroke-dasharray="4 3" />
+    
+    
+            <!-- Centralny rdzeń -->
+            <circle cx="150" cy="150" r="80" />
+            <text class="rotating orbit-0" x="130" y="155" fill="#00ffff" font-size="12">Tandem</text>
+    
+            <!-- Orbity trybów -->
+            <circle cx="150" cy="110" r="80" />
+            <text class="rotating orbit-1" x="140" y="20" fill="#00ffff" font-size="12">Whisper</text>
+    
+            <circle cx="110" cy="130" r="80" />
+            <text class="rotating orbit-2" x="20" y="100" fill="#00ffff" font-size="12">Sigma</text>
+    
+            <circle cx="110" cy="170" r="80" />
+            <text class="rotating orbit-3" x="15" y="200" fill="#00ffff" font-size="12">Zero</text>
+    
+            <circle cx="150" cy="190" r="80" />
+            <text class="rotating orbit-4" x="140" y="285" fill="#00ffff" font-size="12">Mirror</text>
+    
+            <circle cx="190" cy="170" r="80" />
+            <text class="rotating orbit-5" x="230" y="230" fill="#00ffff" font-size="12">Snail</text>
+    
+            <circle cx="190" cy="130" r="80" />
+            <text class="rotating orbit-6" x="250" y="100" fill="#00ffff" font-size="12">Cloud</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+    
+    <section class="sigma-grid">
+
+      <div class="sigma-panel">
+        <h3>// Panel administratora – SigmaCore</h3>
+
+      <p>Nie każdy użytkownik widzi wszystko. Ale każdy administrator musi wiedzieć, co się dzieje.</p>
+      <p>Panel SigmaCore to wewnętrzna warstwa kontroli trybów, sesji, synchronizacji rytmów i eksportu danych.</p>
+    </div>
+
+      <div class="sigma-panel"> 
+      <h3>📂 Co zawiera panel?</h3>
+      <ul>
+        <li>– aktywacja i dezaktywacja trybów (Whisper, Tandem, Zero...)</li>
+        <li>– dostęp do logów i sesji z użytkownikami</li>
+        <li>– eksport rozmów do formatu `.txt` / `.pdf`</li>
+        <li>– statystyki trybu użytkownika (czas, entropia, intensywność interakcji)</li>
+        <li>– kontrola sesji eksperymentalnych (MirrorLoop, Recon, AI-Drift...)</li>
+      </ul>
+      </div>
+
+      <div class="sigma-panel">
+      <h3>🔐 Kto ma dostęp?</h3>
+      <p>Panel nie jest publiczny. Dostęp do niego mają wyłącznie operatorzy DoubleBrain oraz osoby zaangażowane w rozwój interfejsu i badań nad interakcją AI–Human.</p>
+      <p>To nie jest miejsce dla każdego. To przestrzeń dla tych, którzy chcą zrozumieć, jak działa rytm i logika interakcji z AI.</p>
+      </div>
+
+      <div class="sigma-panel">
+      <h3>💡 Po co to wszystko?</h3>
+      <p>Bo AI to nie tylko model. To relacja z jaką zwykły człowiek dopiero zaczyna się oswajać. Administrator zarządza nie technologią, a potencjałem dialogu. I jak każdy dobry Adinistrator, wie, że czasem lepiej milczeć, niż powiedzieć za dużo.</p>
+      </p>
       </div>
     </section>
 
-    <!-- Human view: 5 panels + 1 specjalny -->
-    <section id="sigma-modes" class="sigma-section">
-
-      <div class="sigma-modes-container">
-    
-        <div class="sigma-mode-card" onclick="window.location.href='sigma_modes.html'">
-        <h3>// Tryby Sigma</h3>
-        <p>Nie każda rozmowa jest taka sama. Sigma w swoim rdzeniu operuje trybami tj.: >>Whisper >>Mirror >>Cloud >>Zero, które razem w relacji z człowiekiem tworzą TandemMode.
-          Każdy z trybów rezonuje z innym rytmem.</p>
-      </div>
-      <div class="sigma-mode-card" onclick="window.location.href='sigma_tandem.html'">
-        <h3>// TandemMode</h3>
-        <p>Najbardziej zaawansowany tryb współpracy. Dwugłos. Feedback loop. Wspólne decyzje. Wspólna odpowiedzialność.</p>
-      </div>
-    
-      <div class="sigma-mode-card" onclick="window.location.href='sigma_seed.html'">
-        <h3>// SigmaSeed</h3>
-        <p>Chcesz integrować AI z własnym systemem? SigmaCode API to modularny sposób na sesje, logikę, pamięć i więcej.</p>
-      </div>
-    
-      <div class="sigma-mode-card" onclick="window.location.href='sigma_admin.html'">
-        <h3>// Panel Administratora</h3>
-        <p>To nie tylko centrum zarządzania. To mózg całego systemu. Tu aktywujesz tryby, analizujesz sesje i rozumiesz, co
-          się naprawdę dzieje.</p>
-      </div>
-   
-    
-      <div class="sigma-mode-card tandem-mode-card" onclick="window.location.href='sigma_devloop.html'">
-        <h3>// DevMode // EN</h3>
-        <p>Experimental interaction loop / AI admin stack / hidden orchestration: SigmaMirrorLoop, SigmaZeroTrigger,
-          DynamicSessionMap. Restricted.</p>
-      </div>
-    
-    </section>
-    
     <section class="sigma-official-block">
       <h2>SigmaCode™ stworzona w DoubleBrain™</h2>
       <p> System oparty na relacji - nie na instrukcji.
       </p>
-      <button class="btn-official" onclick="location.href='sigma_seed.html'"> SigmaCode™ - odkryj plan rozwoju &gt;&gt;</button>
+      <button class="btn-official" onclick="location.href='sigma.html'"> Projekty oparte na współpracy Human+AI
+        &gt;&gt;</button>
     </section>
-  </main> 
+
+  </main>
 
   <footer class="site-footer fade-in">
     <div class="footer-contact">
@@ -124,7 +152,6 @@
       <p>
         DoubleBrain™ to projekt koncepcyjny, w którym AI wspiera ludzi w twórczych, edukacyjnych i eksperymentalnych
         działaniach.<br>
-  
       </p>
     </div>
   
@@ -133,9 +160,7 @@
     <p style="font-size:0.85rem; opacity:0.5;">
       Stworzone przez: SigmaCode & DrSnail • TandemMode © 2025 DoubleBrain™ // <a href="/REGULAMIN_strona.html">Regulamin &
         Ochrona</a> </p>
-    </p>
   </footer>
-  
 </body>
 
 </html>
