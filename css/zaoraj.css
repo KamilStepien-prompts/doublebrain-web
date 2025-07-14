@@ -23,6 +23,7 @@ body {
 
 }
 .doublebrain {
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +56,15 @@ height: 50px;
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
+
+.grant-content-wrapper {
+  padding-top: 2rem;
+}
+.top-bar-logo-glitch img:hover {
+  filter: brightness(1.2) contrast(1.2);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
 .top-bar-logo-glitch {
   display: flex;
 }
@@ -62,6 +72,9 @@ height: 50px;
 
 .top-bar {
   display: flex !important;
+  position: sticky;
+      top: 0;
+      /* ← tego brakuje */
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -189,8 +202,18 @@ p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   color: var(--highlight);
+  text-shadow: 0 0 6px var(--magenta);
   animation: fadeIn 1.4s ease-in-out 0.5s forwards;
   opacity: 0;
+}
+a {
+color: var(--white);
+  text-shadow: 0 0 6px var(--magenta);
+
+}
+a:hover {
+  color: var(--cyan);
+
 }
 
 .highlight {
@@ -1243,3 +1266,79 @@ footer {
   border-radius: 12px;
   box-shadow: 0 0 12px #00ffff44;
 }
+
+/* Proste style dla lepszej prezentacji, możesz dostosować do swojego master.css */
+.grant-description-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #1a1a1a;
+  /* Ciemne tło, pasujące do Twojego stylu */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+  /* Neonowy cień */
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  /* Dostosuj do swoich czcionek */
+}
+
+.grant-description-section h2 {
+  color: #00ffff;
+  /* Neonowy błękit */
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2em;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+}
+
+.grant-description-section h3 {
+  color: #ff00aa;
+  /* Neonowy róż */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-shadow: 0 0 5px rgba(255, 0, 170, 0.7);
+}
+
+.grant-description-section p {
+  margin-bottom: 15px;
+}
+
+.grant-description-section strong {
+  color: #00ffff;
+  /* Podkreślenie ważnych nazw */
+}
+
+.grant-description-section .call-to-action {
+  text-align: center;
+  font-style: italic;
+  margin-top: 30px;
+  font-size: 1.1em;
+  color: #ffdd00;
+  /* Neonowy żółty */
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #ff00aa;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 0, 170, 0.7);
+}
+
+.btn-primary:hover {
+  background-color: #e6008f;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 0, 170, 0.9);
+}
+
