@@ -53,10 +53,12 @@
       text-align: center;
       padding: 3rem 1rem;
       overflow-x: hidden;
+      overflow-y: auto;
       max-width: 100%;
       width: 100vw;
       position: relative;
     }
+
     .splash-text-animated {
       margin-top: 2rem;
     }
@@ -88,6 +90,8 @@
       align-items: center;
     }
     .splash-buttons button {
+      width: 100%;
+      max-width: 280px;
       padding: 1rem 2rem;
       font-size: 1rem;
       background-color: #111;
@@ -102,9 +106,20 @@
       color: #000;
     }
     img {
-      max-width: 300px;
-      height: auto;
+     display: block;
+     margin: 0 auto;
+     width: 100%;
+     max-width: 240px;
     }
+    
+    @media (max-width: 480px) {
+  html, body {
+     padding: 2rem 0.5rem;
+  }
+    @media (max-width: 480px) {
+  .fade-line { font-size: 1.1rem; }
+  .fade-line-quest { font-size: 1.2rem; }
+}
   </style>
 </head>
 <body>
@@ -114,7 +129,7 @@
     <div class="splash-text-animated">
       <p class="fade-line">W DoubleBrain™ nie szukamy tylko odpowiedzi.</p>
       <p class="fade-line">Tworzymy przestrzeń na pytania.</p>
-      <p class="fade-line-quest">Czy jesteś gotowy, żeby je zadać? </p>
+      <p class="fade-line-quest">Czy jesteś gotowy, aby je zadać? </p>
     </div>
 
 
