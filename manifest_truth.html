@@ -32,6 +32,10 @@
 </script>
 
   <style>
+    
+
+/* === MOBILE-FIRST STYLING FOR manifest_truth.html === */
+
 body {
   font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
   background-color: #000000;
@@ -148,7 +152,36 @@ ul p {
   text-align: left;
   margin: 0.5rem 0;
 }
+
+
+@media (min-width: 768px) {
+  .sigma-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sigma-panel {
+    flex: 1 1 30%;
+    margin: 1rem;
+    max-width: 30%;
+  }
+
+  .img-triple {
+    justify-content: center;
+  }
+
+  .img-triple img {
+    max-width: 30%;
+  }
+
+  .btn-return, .btn-back {
+    display: inline-block;
+    margin: 2rem;
+  }
+
    </style>
+  
 </head>
 
 <body>
