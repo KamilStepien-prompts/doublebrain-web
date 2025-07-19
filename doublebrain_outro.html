@@ -26,18 +26,18 @@
   <script defer src="js/splash.js"></script>
 <title>DoubleBrain – takeThis.html</title>
 <style>
-    body {
+  body {
       background-color: #000;
       color: #0ee0cf;
       font-family: 'Courier New', Courier, monospace;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       text-align: center;
       min-height: 100vh;
-      margin: 0.4rem;
-      padding: 2rem;
+      margin: 0;
+      padding: 0;
     }
 
     /* -- grafika do wstawienia jako tło ---
@@ -195,7 +195,13 @@
   100% { box-shadow: 0 0 20px #00ffee88, inset 0 0 10px #00ffee44; }
 }
 
-
+    .main-wrap {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
 
 </style>
 <script>
@@ -223,6 +229,7 @@
 
 </head>
 <body>
+  <section class="main-wrap">
 <img alt="DoubleBrain Logo" src="img/db_intro_glow.png"/>
 
 <h1>🔐 Area in praeparatione...</h1>
@@ -232,6 +239,7 @@
 <h1>DoubleBrain™</h1>
 <h2>Stacja Demonicus Primus — stacja końcowa </h2>
 <p> Miejsce dla oddechu między zbrodnią a pokutą</p>
+  </section>
       
     <section class="grajek-shrine">
       <h2 class="grajek-title">🎧 KatharsisSet™ – AudioHypnozjum</h2>
