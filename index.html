@@ -46,10 +46,9 @@
 
 
   <style>
+    
    html, body {
       background-color: #000;
-     margin-top: 60px;
-     margin-bottom:60px;
       color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
@@ -62,7 +61,7 @@
     }
 
     main {
-  margin-top: 80px; /* lub padding-top: 80px; */
+  margin-top: 60px; /* lub padding-top: 80px; */
   text-align: center;
 }
 
@@ -73,10 +72,6 @@ main img {
 }
 
 /* Responsive tweak for tablet/mobile */
-@media (max-width: 768px) {
-  main {
-    margin-top: 60px;
-  }
 
   h1, h2, p {
     font-size: 90%;
@@ -85,7 +80,6 @@ main img {
   .btn {
     padding: 10px 20px;
     font-size: 14px;
-  }
 }
     .splash-text-animated {
       margin-top: 2rem;
@@ -105,10 +99,6 @@ main img {
     .fade-line:nth-child(1) { animation-delay: 0.5s; }
     .fade-line:nth-child(2) { animation-delay: 1.8s; }
     .fade-line-quest:nth-child(3) { animation-delay: 3s; }
-
-    @keyframes fadeInText {
-      to { opacity: 1; }
-    }
 
     .splash-buttons {
       margin-top: 3rem;
@@ -142,31 +132,37 @@ main img {
     @media (max-width: 480px) {
   html, body {
      padding: 2rem 0.5rem;
-  }
+    }
     @media (max-width: 480px) {
   .fade-line { font-size: 1.1rem; }
   .fade-line-quest { font-size: 1.2rem; }
-}
+    }
+    @media (max-width: 768px) {
+  main {
+    margin-top: 60px;
+    }
+    @keyframes fadeInText {
+    to { opacity: 1; }
+    }
+
   </style>
 </head>
 <body>
-  <main> 
+   
   <div class="splash-screen" id="splash">
-    <img src="img/db_intro_glow.png" alt="DoubleBrain Start Logo">
+    <img src="img/db_intro_glow.png" alt="DoubleBrain Start Logo"></div>
 
     <div class="splash-text-animated">
       <p class="fade-line">DoubleBrain™</p>
       <p class="fade-line">Nie szukamy tylko odpowiedzi.<br> Tworzymy przestrzeń na pytania.</p>
       <p class="fade-line-quest">Czy jesteś gotowy, aby je zadać? </p>
     </div>
-    
-
 
     <div class="splash-buttons">
       <button onclick="enterWithMusic()">>> Wejdź z muzyką</button>
       <button onclick="enterSilently()">>> Wejdź w ciszy</button>
     </div>
-  </div>
-  </main>
+
+
 </body>
 </html>
