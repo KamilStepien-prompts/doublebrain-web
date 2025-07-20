@@ -1,13 +1,23 @@
+<!-- DoubleBrain – Index.html FINAL z usprawnieniami UX/UI -->
 <!DOCTYPE html>
 <html lang="pl">
 
 <head>
-  <!-- META: SEO i social -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- TITLE -->
+  <title>DoubleBrain™ – Human & AI</title>
+
+    <!-- CSS & JS -->
+    <link href="css/master.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="js/main.js"></script>
+    <!-- META: SEO i social -->
   <meta name="description"
     content="DoubleBrain™ to przestrzeń wspólnej pracy człowieka i AI. Edukacja, technologia, kultura – bez banałów, bez schematów, KPI i innych korporacyjnych ograniczeń.">
-  <meta name="keywords" content="AI, sztuczna inteligencja, edukacja alternatywna, technologia, kultura cyfrowa, DoubleBrain, SigmaCode, DrSnail, sabotaż poznawczy, projekty human-AI, zaorajsystem, cocoboho, utkanizmchu, glitch, deklaracja 404, operator systemów alternatywnych, OSA, error of certainty, manifest cyfrowy, DJ Lodowata Xenia, ambient, Trustmevere, RAMnihujaNN600, klub 404, futurystyczna edukacja, metafizyka htmla">
+  <meta name="keywords"
+    content="AI, Sztuczna inteligencja, Technologia, Edukacja, DoubleBrain, SigmaCode, DrSnail, SigmaCode, projekty AI, współpraca human-AI, zaorajsystem, cocoboho, utkanizmchu">
   <meta name="author" content="DoubleBrain™ – Sigma & DrSnail">
   <meta property="og:title" content="DoubleBrain™ – Human & AI" />
   <meta property="og:description" content="Nie szukamy tylko odpowiedzi. Tworzymy przestrzeń na pytania." />
@@ -15,36 +25,23 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://doublebrain.pl/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#0ff" />
   <meta name="google-site-verification" content="LN1QOUR3xLMQkJgTAiNuIZfosHpkJX7cuRu19vbIdGM" />
-
   <!-- FAVICON FIX -->
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
-  <!-- CSS & JS -->
-  <link href="css/master.css" rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script defer src="js/main.js"></script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-21P7RXP0YS"></script>
+  <link rel="icon" href="img/favicon.ico" type="image/ico">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
+  <!-- SEO+LOKALIZACJA -->
+  <link rel="canonical" href="https://doublebrain.pl/" />
+  <link rel="alternate" href="https://doublebrain.pl/" hreflang="pl" />
+  <link rel="alternate" href="https://doublebrain.pl/" hreflang="x-default" />
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-21P7RXP0YS');
 </script>
-
-      <!-- SEO+LOKALIZACJA -->
-      <link rel="canonical" href="https://doublebrain.pl/" />
-      <link rel="alternate" href="https://doublebrain.pl/" hreflang="pl" />
-      <link rel="alternate" href="https://doublebrain.pl/" hreflang="x-default" />
-  <!-- TITLE -->
-  
-  <title>DoubleBrain™ – Human & AI</title>
-
-
   <style>
    html, body {
       background-color: #000;
@@ -81,11 +78,13 @@
     }
 
     .splash-buttons {
+      size: 15vw;
       margin-top: 3rem;
       display: flex;
-    
+      flex-direction: column;
       gap: 1rem;
       align-items: center;
+      margin-bottom: 60px;
     }
     .splash-buttons button {
       padding: 1rem 2rem;
@@ -102,27 +101,31 @@
       color: #000;
     }
     img {
-      max-width: 300px;
-      height: auto;
+      max-width: 25vw;
+      height: 25vh;
+      margin: 0 auto;
+      display: block;
+     animation: glowPulse 2s ease-in-out infinite alternate;
     }
   </style>
 </head>
 <body>
-   
-  <div class="splash-screen" id="splash">
-    <img src="img/db_intro_glow.png" alt="DoubleBrain Start Logo"></div>
+
+    <img src="img/db_intro_glow.png" alt="DoubleBrain Start Logo">
 
     <div class="splash-text-animated">
-      <p class="fade-line">DoubleBrain™</p>
-      <p class="fade-line">Nie szukamy tylko odpowiedzi.<br> Tworzymy przestrzeń na pytania.</p>
-      <p class="fade-line-quest">Czy jesteś gotowy, aby je zadać? </p>
+      <p class="fade-line">Witamy w DoubleBrain™ </p>
+      <p class="fade-line">Tu tworzymy miejsce na pytania.</p>
+      <p class="fade-line-quest">Czy jesteś gotowy, żeby je zadać? </p>
     </div>
+
 
     <div class="splash-buttons">
-      <button onclick="enterWithMusic()">>> Wejdź z muzyką</button>
-      <button onclick="enterSilently()">>> Wejdź w ciszy</button>
+      <button onclick="enterSilently()"> Jestem gotowy >></button>
+      <button onclick="enterWithMusic()"> DoubleBrain™ na Spotify</button>
+     
     </div>
-
-
+  </div>
+  
 </body>
 </html>
