@@ -79,6 +79,7 @@ body {
   .hover-wrapper {
     opacity: 1 !important;
     transform: none !important;
+     font-size: 0.9rem;
   }
 
   .identity-box:hover .hover-wrapper {
