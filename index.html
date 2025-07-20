@@ -48,7 +48,7 @@
   <style>
    html, body {
       background-color: #000;
-     margin-top: 60px;
+     margin-top: 100px;
      margin-bottom:60px;
       color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -112,8 +112,8 @@ main img {
 
     .splash-buttons {
       margin-top: 3rem;
-      display: flex;
-      flex-direction: column;
+      display: block; 
+      flex-direction: row;
       gap: 1rem;
       align-items: center;
     }
@@ -151,6 +151,7 @@ main img {
   </style>
 </head>
 <body>
+  <main> 
   <div class="splash-screen" id="splash">
     <img src="img/db_intro_glow.png" alt="DoubleBrain Start Logo">
 
@@ -159,6 +160,7 @@ main img {
       <p class="fade-line">Nie szukamy tylko odpowiedzi.<br> Tworzymy przestrzeń na pytania.</p>
       <p class="fade-line-quest">Czy jesteś gotowy, aby je zadać? </p>
     </div>
+    </main>
 
 
     <div class="splash-buttons">
