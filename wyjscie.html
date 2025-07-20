@@ -23,11 +23,17 @@
     <meta name="twitter:card" content="summary_large_image">
 
   <style>
+
+html {
+  overflow-x: hidden;
+}
+
     body {
       background-color: #000;
       color: #00ffff;
       font-family: monospace;
       display: flex;
+      overflow-x: hidden;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -35,6 +41,16 @@
       text-align: center;
       padding: 2rem;
     }
+
+     .main-container {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
     .btn-return, .btn-enter {
       margin-top: 2rem;
       background: transparent;
@@ -64,7 +80,7 @@
   </style>
 </head>
 <body>
-
+<div class="main-container">
   <h1>Chciałeś wejść do SigmaCode? </h1>
   <h2>Wcześniej masz szanse sprawdzić nasz manifest. </h2> 
   <p>Tu nie ma „zamknij”. Tu nie ma „wróć później”.</p>
@@ -76,6 +92,7 @@
 
   <button class="btn-return" onclick="window.location.href='sigma.html'">← Wróć i udawaj, że nic się nie stało</button>
   <button class="btn-enter" onclick="window.location.href='manifest_truth.html'">// NICZEGO NIE UDAWAJ — WEJDŹ DALEJ &raquo;</button>
+</div>
 
 </body>
 </html>
