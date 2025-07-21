@@ -44,12 +44,20 @@
 </script>
   <style>
    html, body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
       background-color: #000;
       color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
-      padding: 3rem 1rem;
+     
       overflow-x: hidden;
+      min-height: 100vh;
       max-width: 100%;
       width: 100vw;
       position: relative;
@@ -76,6 +84,15 @@
     @keyframes fadeInText {
       to { opacity: 1; }
     }
+
+    .splash-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
 
     .splash-buttons {
       size: 15vw;
@@ -110,7 +127,7 @@
   </style>
 </head>
 <body>
-
+  <div class="splash-wrapper">
     <img src="img/db_intro_glow.png" alt="DoubleBrain Start Logo">
 
     <div class="splash-text-animated">
