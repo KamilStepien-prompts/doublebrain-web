@@ -128,6 +128,30 @@
       text-align: center;
     }
 
+    @media (min-width: 481px) and (max-width: 900px) {
+  .splash-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .spotify-subtext {
+    order: 3;
+    margin: 0;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    max-width: 90%;
+  }
+
+  .splash-buttons button {
+    width: 260px;
+    max-width: 90%;
+  }
+}
+
+
     @media (max-width: 480px) {
       .logo-splash {
         max-width: 60vw;
