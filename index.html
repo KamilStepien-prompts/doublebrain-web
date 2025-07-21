@@ -117,18 +117,27 @@
       background-color: #81d4fa;
       color: #000;
     }
-    img {
-      max-width: 25vw;
-      height: 25vh;
-      margin: 0 auto;
-      display: block;
-     animation: glowPulse 1.5s ease-in-out infinite alternate;
-    }
+.logo-splash {
+  max-width: 25vw;
+  height: 25vh;
+  margin: 0 auto;
+  display: block;
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+@media (max-width: 480px) {
+  .logo-splash {
+    max-width: 60vw;
+    height: auto;
+  }
+}
+
   </style>
 </head>
 <body>
   <div class="splash-wrapper">
-    <img src="img/db_intro_glow.png" alt="DoubleBrain Start Logo">
+    <img class="logo-splash" src="img/db_intro_glow.png" alt="DoubleBrain Start Logo">
+
 
     <div class="splash-text-animated">
       <p class="fade-line">Witamy w DoubleBrain™ </p>
