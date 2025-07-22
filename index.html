@@ -102,7 +102,13 @@
     @keyframes fadeInText {
       to { opacity: 1; }
     }
-
+.main-container {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
     .splash-buttons {
       display: flex;
       flex-direction: column;
@@ -178,6 +184,7 @@
 </head>
 
 <body>
+<div class="main-container">
   <div class="splash-wrapper">
     <img class="logo-splash" src="img/db_intro_glow.png" alt="DoubleBrain Start Logo">
 
@@ -194,7 +201,6 @@
       </p>
       <button onclick="enterWithMusic()">DoubleBrain™ na Spotify</button>
     </div>
-     
       
     </div>
   </div>
