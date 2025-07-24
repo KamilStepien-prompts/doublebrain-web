@@ -190,9 +190,9 @@
       if (clickCount === 1) {
         portal.style.opacity = '0.7';
       } else if (clickCount === 2) {
-        portal.textContent = 'Nie każda droga prowadzi do światła...';
+        portal.textContent = 'Zrozum AI, poznaj Siebie';
       } else if (clickCount >= 3) {
-        window.location.href = 'wyjscie.html';
+        window.location.href = 'sigma.html';
       }
     });
   }
