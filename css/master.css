@@ -2008,6 +2008,48 @@ transform: scale(1.05);
 }
 }
 
+.sigmacode-box {
+  background: radial-gradient(circle at center, rgba(0,255,255,0.05), rgba(0,255,255,0.02));
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,255,255,0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.sigmacode-box:hover {
+  box-shadow: 0 0 20px rgba(0,255,255,0.2), 0 0 30px rgba(0,255,255,0.1) inset;
+  transform: scale(1.02);
+}
+
+.sigmacode-box h3 {
+  color: cyan;
+  font-style: italic;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(0,255,255,0.2);
+  margin-bottom: 1.5rem;
+}
+
+.sigmacode-box a {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 2px solid cyan;
+  color: cyan;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sigmacode-box a:hover {
+  background: cyan;
+  color: black;
+  box-shadow: 0 0 15px cyan;
+  transform: translateY(-2px);
+}
+
+
 
 
 /* === KONIEC PATCHA SIGMA === */
