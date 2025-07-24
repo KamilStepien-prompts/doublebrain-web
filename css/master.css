@@ -2079,6 +2079,18 @@ transform: scale(1.05);
   background: #00cccc;
   box-shadow: 0 0 25px #00ffff;
 }
+.nose-click-tip {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #00ffffbb;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nose-click-tip:hover {
+  color: #ffffff;
+}
 
 
 
