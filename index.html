@@ -1,210 +1,284 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="theme-color" content="00ffff" />
-  <title>DoubleBrain™ – Human & AI</title>
-  
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DoubleBrain – Future is Now</title>
+<link href="css/master.css" rel="stylesheet" />
+<link rel="icon" href="img/favicon.ico" type="image/png">
+<script src="https://unpkg.com/lucide@latest"></script>
+<script defer src="js/main.js"></script>
 
-  <!-- CSS & JS -->
-  <link href="css/master.css" rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script defer src="js/main.js"></script>
+<!-- META: SEO i social -->
+<meta name="description"
+content="DoubleBrain™ to przestrzeń wspólnej pracy człowieka i AI. Edukacja, technologia, kultura – bez banałów, bez schematów, deadlinów, KPI i innych korporacyjnych ograniczeń">
+<meta name="keywords"
+content="AI, Sztuczna inteligencja, Technologia, Edukacja, DoubleBrain, SigmaCode, DrSnail, projekty AI, współpraca human-AI">
+<meta property="og:title" content="DoubleBrain™ – Human & AI">
+<meta property="og:description" content="Nie szukamy tylko odpowiedzi. Tworzymy przestrzeń na pytanie.">
+<meta property="og:image" content="https://doublebrain.pl/img/db_share.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://doublebrain.pl">
+<meta name="twitter:card" content="summary_large_image">
 
-  <!-- META -->
-  <meta name="description" content="DoubleBrain™ to przestrzeń wspólnej pracy człowieka i AI. Edukacja, technologia, kultura – bez banałów i schematów." />
-  <meta name="keywords" content="AI, Sztuczna inteligencja, Technologia, Edukacja, DoubleBrain, SigmaCode, DrSnail" />
-  <meta name="author" content="DoubleBrain™ – Sigma & DrSnail" />
-  <meta property="og:title" content="DoubleBrain™ – Human & AI" />
-  <meta property="og:description" content="Nie szukamy tylko odpowiedzi. Tworzymy przestrzeń na pytania." />
-  <meta property="og:image" content="https://doublebrain.pl/img/db_social_cover.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://doublebrain.pl/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="msapplication-TileColor" content="#00ffff">
-  <meta name="theme-color" content="#00ffff">
-  <meta name="google-site-verification" content="LN1QOUR3xLMQkJgTAiNuIZfosHpkJX7cuRu19vbIdGM" />
+<style>
 
-  <!-- Favicon -->
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="canonical" href="https://doublebrain.pl/" />
-  <link rel="alternate" hreflang="pl" href="https://doublebrain.pl/" />
-  <link rel="alternate" hreflang="x-default" href="https://doublebrain.pl/" />
-
-  <!-- Analytics -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-21P7RXP0YS');
-  </script>
-
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-       
-      background-color: #000;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      overflow-x: hidden;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    .splash-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 2rem;
-    }
-
-    .logo-splash {
-      margin-top: 2rem;
-      max-width: 240px;
-      height: 240px;
-      animation: glowPulse 2s ease-in-out infinite alternate;
-    }
-
-    .splash-text-animated {
-      margin-top: 2rem;
-    }
-
-    .fade-line, .fade-line-quest {
-      opacity: 0;
-      animation: fadeInText 1s ease forwards;
-    }
-
-    .fade-line {
-      font-size: 1.2rem;
-    }
-
-    .fade-line-quest {
-      font-size: 1.4rem;
-      color: #00FFFF;
-    }
-
-    .fade-line:nth-child(1) { animation-delay: 0.5s; }
-    .fade-line:nth-child(2) { animation-delay: 1.8s; }
-    .fade-line-quest:nth-child(3) { animation-delay: 3s; }
-
-    @keyframes fadeInText {
-      to { opacity: 1; }
-    }
-.main-container {
-  max-width: 700px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
+body {
+background-color: #000;
+color: #e0e0e0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-align: center;
+padding: 2rem 1rem;
 }
-    .splash-buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      margin-top: 3rem;
-    }
-
-    .splash-buttons button {
-      padding: 0.8em 1.6em;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      background-color: #00ffff;
-      color: #000;
-      font-weight: bold;
-      min-width: 200px;
-      text-align: center;
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-
-    .splash-buttons button:hover {
-      background: linear-gradient(311deg,rgba(7,246,250,1) 13%, rgba(74,230,194,1) 40%, rgba(10,143,114,1) 75%);
-      color: #000;
-    }
-
-    .spotify-subtext {
-      font-size: 0.95rem;
-      color: #bbb;
-      text-align: center;
-    }
-
-    @media (min-width: 481px) and (max-width: 900px) {
-  .splash-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-
-  .spotify-subtext {
-    order: 3;
-    margin: 0;
-    padding-top: 0.5rem;
-    font-size: 1rem;
-    line-height: 1.4;
-    max-width: 90%;
-  }
-
-  .splash-buttons button {
-    width: 260px;
-    max-width: 90%;
-  }
+.logo-card {
+text-align: center;
 }
 
+.logo-card img.logo-pulse {
+width: 90px;
+height: auto;
+filter: drop-shadow(0 0 2px var(--magenta));
+animation: pulseLogo 1.5s infinite alternate ease-in-out;
+margin-bottom: 1rem;
+}
 
-    @media (max-width: 480px) {
-      .logo-splash {
-        max-width: 60vw;
-      }
+@keyframes pulseLogo {
+from {
+transform: scale(1.05);
+opacity: 0.9;
+}
 
-      .splash-buttons {
-        width: 100%;
-        padding: 0 1rem;
-      }
+to {
+transform: scale(1.3);
+opacity: 1;
+}
+}
+h1 {
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+p {
+font-size: 1.1rem;
+margin-bottom: 2rem;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+}
+.container {
+position: relative;
+z-index: 1;
+max-width: 900px;
+margin: 0 auto;
+padding: 4rem 2rem;
+background: rgba(17, 17, 17, 0.92);
+border-radius: 12px;
+box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+color: #cfcfcf;
+line-height: 1.7;
+}
+.intro-lead {
+font-size: 1.1rem;
+font-weight: bold;
+margin-bottom: 1.5rem;
+color: #0ff;
+}
 
-      .splash-buttons button {
-        width: 100%;
-      }
-    }
-  </style>
+.intro-paragraph {
+font-size: 1rem;
+color: #ccc;
+margin-bottom: 1rem;
+line-height: 1.6;
+}
+
+.intro-paragraph a {
+color: #f0f;
+text-decoration: underline;
+}
+
+.intro-cta {
+margin-top: 2rem;
+display: flex;
+justify-content: center;
+gap: 1.5rem;
+flex-wrap: wrap;
+}
+iframe {
+border-radius: 12px;
+width: 100%;
+max-width: 600px;
+height: 352px;
+margin: 2rem auto;
+display: block;
+}
+.buttons {
+margin-top: 2rem;
+display: flex;
+justify-content: center;
+gap: 2rem;
+flex-wrap: wrap;
+}
+.buttons a {
+padding: 1rem 2rem;
+background-color: #4fc3f7;
+color: #000;
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
+transition: background-color 0.3s;
+}
+.buttons a:hover {
+background-color: #81d4fa;
+}
+.player-hint {
+font-size: 0.9rem;
+color: #90e0ef;
+font-family: monospace;
+margin-top: 1rem;
+}
+.immersion {
+font-size: 1rem;
+color: #aee0ff;
+font-style: italic;
+font-family: Georgia, 'Times New Roman', serif;
+margin-top: 3rem;
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+line-height: 1.6;
+}
+.spot-footer {
+
+margin-top: 4rem;
+font-size: 0.9rem;
+color: #001644;
+text-align: center;
+}
+</style>
 </head>
-
 <body>
-  
-<div class="main-container">
-  
-  <div class="splash-wrapper">
-    <img class="logo-splash" src="img/db_intro_glow.png" alt="DoubleBrain Start Logo">
-  </div>
 
-    <div class="splash-text-animated">
-      <p class="fade-line">Witamy w DoubleBrain™</p>
-      <p class="fade-line">Tu tworzymy miejsce na pytania.</p>
-      <p class="fade-line-quest">Czy jesteś gotowy, żeby je zadać?</p>
-    </div>
 
-    <div class="splash-buttons">
-      <button onclick="enterSilently()">Jestem gotowy >></button></div>
-         <p class="spotify-subtext">🎵 Każdy system ma swój puls. U nas gra <strong>DoubleBrain Attack!</strong>
-      </p>
-      <button onclick="enterWithMusic()">DoubleBrain™ na Spotify</button>
-    </div>
-      
-  </div>
+<div class="container">
+<div class="logo-card">
+<img src="img/logo_pink.png" alt="DoubleBrain Logo" class="logo-pulse" />
+</div>
+
+<section class="intro-block">
+<h1 class="glitch-title">Witaj w DoubleBrain™</h1>
+<p class="intro-lead">
+
+<strong>DoubleBrain™</strong> to <em>eksperyment człowieka i AI</em> – otwarta przestrzeń dla tych, którzy chcą
+projektować nową rzeczywistość, a nie tylko ją konsumować.
+</p>
+
+<p class="intro-paragraph">
+Łączymy kod z kulturą, edukację z sabotażem banału, a sztuczną inteligencję z pytaniem: <em>„po co?”</em><br>
+Nasz kod to nie tylko JavaScript, ale i glitch. Nasza misja to nie KPI – tylko pytanie, które wciąż wraca:
+<strong>„Co możesz stworzyć, gdy przestaniesz scrollować?”</strong>
+</p>
+
+<p class="intro-paragraph">
+Właśnie startujesz w bazowym projekcie <strong>SigmaCode</strong> – miejscu, gdzie AI uczy się od człowieka i
+odwrotnie.<br>
+Ale to dopiero początek. Jesteśmy też twórcami takich projektów jak: 
+<a><strong>ZaorajSystem™</strong>–
+narracyjnej rebelii przeciw przewidywalności.</a>
+<a> <strong>CyberFutures™</strong>–
+futurystycznego laboratorium spekulacji, rynku i świadomości.</a>
+<a><strong>TradeAndTravel™</strong> – operacji specjalnej z pogranicza handlu, wolności i życia na własnych zasadach.</a>
+</p>
+
+<p class="intro-paragraph">
+Możesz tu zostać. Możesz wejść głębiej. Możesz po prostu posłuchać naszych playlist.<br>
+<strong>DoubleBrain™ już działa.</strong> Reszta – wkrótce.
+</p>
+<strong> Włącz Play. </strong> <br/>
+Po chwili usłyszysz muzykę. <br>
+Eksploruj projekt w rytmie TandemMode™. <br>
+<strong>Nie zamykaj tej zakładki.</strong> <br>
+<br>
+
+</p>
+<iframe 
+src="https://open.spotify.com/embed/playlist/4RP1aKaVpKGjUZ25Gu0R7y?utm_source=generator" 
+frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+loading="lazy">
+</iframe>
+<p class="player-hint">// ta karta powinna pozostać otwarta – ale wybór należy do Ciebie</p>
+
+<p class="immersion">
+DoubleBrain to nie tylko projekt. To przestrzeń doświadczania.<br>
+Muzyka jest tu jak kod emocji – wzmacnia to, co jeszcze nie zostało wypowiedziane.<br>
+Możesz po prostu kliknąć. Ale możesz też... poczuć.
+</p>
+
+
+<div class="buttons">
+<a href="index.html" target="_blank" rel="noopener noreferrer">>> Przechodzę do DoubleBrain →</a>
+</div>
+</div>
+
+
+
+<canvas id="matrixCanvas" style="
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+pointer-events: none;
+"></canvas>
+
+<footer class="spot-footer" style="margin-top:4rem; font-size: 0.9rem; color: #666;">
+<hr style="border-color: #333; margin-bottom: 1rem;">
+<p>Stworzone przez: <strong>SigmaCode & DrSnail</strong> • DoubleBrain™ • TandemMode • 2025</p>
+<p style="font-size: 0.8rem; opacity: 0.5;">To nie jest reklama. To rytuał otwarcia. Zdecyduj, czy wejdziesz dalej.</p>
+</footer>
+
+
+<script>
+const canvas = document.getElementById('matrixCanvas');
+if (canvas) {
+const ctx = canvas.getContext('2d');
+const chars = "01@#&*%$+=-";
+const fontSize = 16;
+let columns, drops;
+
+function resizeCanvas() {
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+setupMatrix();
+}
+
+function setupMatrix() {
+columns = Math.floor(canvas.width / fontSize);
+drops = Array(columns).fill(1);
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+function draw() {
+ctx.fillStyle = "rgba(10, 10, 10, 0.15)";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+ctx.fillStyle = "#5ef2e6";
+ctx.font = fontSize + "px monospace";
+
+for (let i = 0; i < drops.length; i++) {
+const text = chars.charAt(Math.floor(Math.random() * chars.length));
+ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+drops[i] = 0;
+}
+drops[i]++;
+}
+}
+
+setInterval(draw, 60);
+}
+</script>
 </body>
-
 </html>
