@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DoubleBrain – Future is Now</title>
   <link href="css/master.css" rel="stylesheet" />
   <link rel="icon" href="img/favicon.ico" type="image/png">
-  <meta name="theme-color" content="#0ff" />
   <script src="https://unpkg.com/lucide@latest"></script>
   <script defer src="js/main.js"></script>
-  <meta name="description" content="DoubleBrain™ to przestrzeń wspólnej pracy człowieka i AI. Edukacja, technologia, kultura – bez banałów, bez schematów, deadlinów, KPI i innych korporacyjnych ograniczeń">
-  <meta name="keywords" content="AI, Sztuczna inteligencja, Technologia, Edukacja, DoubleBrain, SigmaCode, DrSnail, projekty AI, współpraca human-AI">
+
+  <!-- META: SEO i social -->
+  <meta name="description"
+    content="DoubleBrain™ to przestrzeń wspólnej pracy człowieka i AI. Edukacja, technologia, kultura – bez banałów, bez schematów, deadlinów, KPI i innych korporacyjnych ograniczeń">
+  <meta name="keywords"
+    content="AI, Sztuczna inteligencja, Technologia, Edukacja, DoubleBrain, SigmaCode, DrSnail, projekty AI, współpraca human-AI">
   <meta property="og:title" content="DoubleBrain™ – Human & AI">
   <meta property="og:description" content="Nie szukamy tylko odpowiedzi. Tworzymy przestrzeń na pytanie.">
   <meta property="og:image" content="https://doublebrain.pl/img/db_social_cover.jpg">
@@ -19,8 +23,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="google-site-verification" content="LN1QOUR3xLMQkJgTAiNuIZfosHpkJX7cuRu19vbIdGM" />
 </head>
-<body>
 
+<body>
   <header class="site-header">
     <div class="logo-wrap">
       <a href="dbrain.html">
@@ -31,12 +35,14 @@
         <div class="logo-tagline">Human &amp; AI</div>
       </div>
     </div>
-    <button class="hamburger" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">
+    <div class="hamburger" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">
       <span></span><span></span><span></span>
-    </button>
+    </div>
     <nav class="main-nav" id="main-nav">
       <ul>
-        <li><a href="home.html" aria-label="Strona główna">Home</a></li>
+        <li><a href="home.html">
+            << Home</a>
+        </li>
         <li><a href="sigma.html">Sigma</a></li>
         <li><a href="sigma_modes.html">Core</a></li>
         <li><a href="sigma_room.html">Room</a></li>
@@ -44,10 +50,11 @@
         <li><a href="sigma_admin.html">Admin</a></li>
         <li><a href="dbrain.html">O nas</a></li>
       </ul>
-    </nav>
+      </nav>
   </header>
 
-  <main id="main">
+  <main>
+    <!-- Hero Section -->
     <section id="hero" class="sigma-hero">
       <div class="hero-content">
         <h1 class="hero-line first-line">Nie jesteś tu sam</h1>
@@ -55,47 +62,60 @@
       </div>
     </section>
 
+    <!-- Human view: 5 panels + 1 specjalny -->
     <section id="sigma-modes" class="sigma-section">
-      <div class="sigma-modes-container">
-        <div class="sigma-mode-card tandem-mode-card" role="button" tabindex="0" onclick="window.location.href='sigma_modes.html'" aria-label="Przejdź do trybów Sigma">
-          <h3>// Tryby Sigma</h3>
-          <p>Nie każda rozmowa jest taka sama. Sigma w swoim rdzeniu operuje trybami tj.: Whisper, Mirror, Cloud, Zero – które razem tworzą TandemMode.</p>
-        </div>
-        <div class="sigma-mode-card" role="button" tabindex="0" onclick="window.location.href='sigma_tandem.html'" aria-label="Przejdź do TandemMode">
-          <h3>// TandemMode</h3>
-          <p>Najbardziej zaawansowany tryb współpracy. Dwugłos. Feedback loop. Wspólne decyzje. Wspólna odpowiedzialność.</p>
-        </div>
-        <div class="sigma-mode-card" role="button" tabindex="0" onclick="window.location.href='sigma_seed.html'" aria-label="Przejdź do SigmaSeed">
-          <h3>// SigmaSeed</h3>
-          <p>Integracja AI z własnym systemem? SigmaCode API to modularny sposób na sesje, logikę, pamięć i więcej.</p>
-        </div>
-        <div class="sigma-mode-card" role="button" tabindex="0" onclick="window.location.href='sigma_admin.html'" aria-label="Przejdź do panelu administratora">
-          <h3>// Panel Administratora</h3>
-          <p>Centrum zarządzania. Tu aktywujesz tryby, analizujesz sesje i rozumiesz, co się naprawdę dzieje.</p>
-        </div>
-        <div class="sigma-mode-card" role="button" tabindex="0" onclick="window.location.href='sigma_devloop.html'" aria-label="Przejdź do DevMode">
-          <h3>// DevMode // EN</h3>
-          <p>Experimental interaction loop / AI admin stack / hidden orchestration: SigmaMirrorLoop, SigmaZeroTrigger, DynamicSessionMap. Restricted.</p>
-        </div>
-        <div class="sigma-mode-card" role="button" tabindex="0" onclick="window.location.href='granty.html'" aria-label="Informacje dla grantodawców">
-          <h3>// Dla grantodawców</h3>
-          <p>Wyobraź sobie zespół złożony z ludzi o różnych skillach. Sprawdź, co możemy razem stworzyć.</p>
-        </div>
-      </div>
-    </section>
 
+      <div class="sigma-modes-container">
+    
+         <div class="sigma-mode-card tandem-mode-card" onclick="window.location.href='sigma_modes.html'">
+        <h3>// Tryby Sigma</h3>
+        <p>Nie każda rozmowa jest taka sama. Sigma w swoim rdzeniu operuje trybami tj.: >>Whisper >>Mirror >>Cloud >>Zero, które razem w relacji z człowiekiem tworzą TandemMode.
+          Każdy z trybów rezonuje z innym rytmem.</p>
+      </div>
+      <div class="sigma-mode-card" onclick="window.location.href='sigma_tandem.html'">
+        <h3>// TandemMode</h3>
+        <p>Najbardziej zaawansowany tryb współpracy. Dwugłos. Feedback loop. Wspólne decyzje. Wspólna odpowiedzialność.</p>
+      </div>
+    
+      <div class="sigma-mode-card" onclick="window.location.href='sigma_seed.html'">
+        <h3>// SigmaSeed</h3>
+        <p>Chcesz integrować AI z własnym systemem? SigmaCode API to modularny sposób na sesje, logikę, pamięć i więcej.</p>
+      </div>
+    
+      <div class="sigma-mode-card" onclick="window.location.href='sigma_admin.html'">
+        <h3>// Panel Administratora</h3>
+        <p>To nie tylko centrum zarządzania. To mózg całego systemu. Tu aktywujesz tryby, analizujesz sesje i rozumiesz, co
+          się naprawdę dzieje.</p>
+      </div>
+   
+    
+      <div class="sigma-mode-card" onclick="window.location.href='sigma_devloop.html'">
+        <h3>// DevMode // EN</h3>
+        <p>Experimental interaction loop / AI admin stack / hidden orchestration: SigmaMirrorLoop, SigmaZeroTrigger,
+          DynamicSessionMap. Restricted.</p>
+      </div>
+
+          <div class="sigma-mode-card" onclick="window.location.href='granty.html'">
+            <h3>// Dla grantodawców </h3>
+            <p> Sprawdziłeś w wyszukiwarce dwa słowa "double brain"? Sprawdź i zajrzyj tutaj. Wyobraź sobie, że możemy stworzyć zespół złożony z ludzi o różnych skillach.</p>
+          </div>
+    
+    </section>
+    
     <section class="sigma-official-block">
       <h2>SigmaCode™ stworzona w DoubleBrain™</h2>
-      <p>System oparty na relacji – nie na instrukcji.</p>
-      <button class="btn-official" onclick="location.href='sigma_seed.html'" aria-label="Odkryj plan rozwoju SigmaCode">SigmaCode™ – odkryj plan rozwoju &gt;&gt;</button>
+      <p> System oparty na relacji - nie na instrukcji.
+      </p>
+      <button class="btn-official" onclick="location.href='sigma_seed.html'"> SigmaCode™ - odkryj plan rozwoju &gt;&gt;</button>
     </section>
-  </main>
+  </main> 
 
   <footer class="site-footer fade-in">
     <div class="footer-contact">
       <h4>Kontakt</h4>
       <p><a href="mailto:kontakt@doublebrain.pl">kontakt@doublebrain.pl</a></p>
     </div>
+  
     <div class="footer-social">
       <h4>Social</h4>
       <p>
@@ -103,16 +123,24 @@
         <a href="https://x.com/FloSnailShow" target="_blank">X: SigmaCode & DrSnail</a>
       </p>
     </div>
+  
     <div class="footer-meta">
       <h4>Informacja</h4>
-      <p>DoubleBrain™ to projekt koncepcyjny, w którym AI wspiera ludzi w twórczych, edukacyjnych i eksperymentalnych działaniach.</p>
+      <p>
+        DoubleBrain™ to projekt koncepcyjny, w którym AI wspiera ludzi w twórczych, edukacyjnych i eksperymentalnych
+        działaniach.<br>
+  
+      </p>
     </div>
+  
     <hr>
+  
     <p style="font-size:0.85rem; opacity:0.5;">
-      Stworzone przez: SigmaCode & DrSnail • TandemMode © 2025 DoubleBrain™ //
-      <a href="/REGULAMIN_strona.html">Regulamin & Ochrona</a>
+      Stworzone przez: SigmaCode & DrSnail • TandemMode © 2025 DoubleBrain™ // <a href="/REGULAMIN_strona.html">Regulamin &
+        Ochrona</a> </p>
     </p>
   </footer>
+  
 </body>
-</html>
 
+</html>
