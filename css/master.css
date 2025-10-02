@@ -157,11 +157,11 @@ background-image: url('../img/indexHTML/index_symbioza.jpg');
 
 /* DBRAIN.html – no/yes/official/o nas */
 .identity-box[data-id="no"]::before {
-background-image: url('../img/dbrainHTML/db_no_left.jpg');
+background-image: url('../img/girls/coco_yes.jpg');
 }
 
 .identity-box[data-id="yes"]::before {
-background-image: url('../img/girls/coco_yes.jpg');
+background-image: url('../img/dbrainHTML/db_no_left.jpg');
 }
 
 .identity-box[data-id="official"]::before {
